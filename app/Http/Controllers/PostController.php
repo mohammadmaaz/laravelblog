@@ -49,7 +49,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         // validate the data
         $this->validate($request,array(
             'title' => 'required|max:255',
@@ -135,10 +135,10 @@ class PostController extends Controller
         'category_id' => 'required|integer',
         'body'=> 'required' ));
         }
-     
+
 
      //Save the data to the databases
-     
+
      $post->title = $request->input('title');
      $post->slug = $request->input('slug');
      $post->category_id = $request->input('category_id');
@@ -152,7 +152,7 @@ class PostController extends Controller
      {
         $post->tags()->sync(array());
      }
-     
+
 
      //set flash data with success message
      Session::flash('success', 'This post was successfully saved');
