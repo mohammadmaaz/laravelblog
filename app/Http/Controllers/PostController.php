@@ -9,6 +9,7 @@ use App\Post;
 use App\Category;
 use App\Tag;
 use Session;
+//use Purifier;
 
 class PostController extends Controller
 {
